@@ -12,7 +12,14 @@ public class SCMaven {
 	public static void main(String[] args) throws Exception {
 		
 		String[] input = args[0].split("::");
-		SCMaven.SCRunExecution(Integer.parseInt(input[0]), input[1], input[2]);
+		String[] executionNodes = input[0].split(",");
+		int[] execNodeIDs;
+		
+		  for (int i=0; i<=executionNodes.length; i++)  
+	        { 
+			  execNodeIDs[i] = Integer.parseInt(executionNodes[i]);
+	      	SCMaven.SCRunExecution(execNodeIDs[i], input[1], input[2]);
+	        }
 
 	}
 
