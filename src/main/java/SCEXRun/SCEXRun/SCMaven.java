@@ -47,6 +47,7 @@ public class SCMaven {
 					response.append(responseLine.trim());
 				}
 				String JsonString = response.toString();
+				System.out.println(JsonString);
 				Map<String, String> map = new HashMap<String, String>();
 
 				String[] JStr = JsonString.split("}],");
@@ -66,5 +67,6 @@ public class SCMaven {
 			System.out.println("Exception:- " + e);
 		}
 	}
+	
 
 }
