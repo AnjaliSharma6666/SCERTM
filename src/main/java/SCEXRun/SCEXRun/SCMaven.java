@@ -47,7 +47,6 @@ public class SCMaven {
 					response.append(responseLine.trim());
 				}
 				String JsonString = response.toString();
-				System.out.println(JsonString);
 				Map<String, String> map = new HashMap<String, String>();
 
 				String[] JStr = JsonString.split("}],");
@@ -59,7 +58,7 @@ public class SCMaven {
 				}
 				
 					
-				System.out.println("Started run with  " +  map.get("\"executionPlanRunId\"") + " for execution plan is "+ map.get("\"executionPlanName\"") + " with Run Status " + map.get("\"status\"") + " Project ID " + map.get("\"projectId\"") + " Run Link " + SC_Host + "/silk/DEF/TM/Execution?pId="	+ map.get("\"projectId\"") + "&testRunId=" + map.get("\"executionPlanRunId\"") + "&execView=execDetails&etab=4"); );
+				System.out.println("Started run with  " +  map.get("\"executionPlanRunId\"") + " for execution plan is "+ map.get("\"executionPlanName\"") + " with Run Status " + map.get("\"status\"") + " Project ID " + map.get("\"projectId\"") + " Run Link " + SC_Host + "/silk/DEF/TM/Execution?pId="	+ map.get("\"projectId\"") + "&testRunId=" + map.get("\"executionPlanRunId\"") + "&execView=execDetails&etab=4" );
 				Thread.sleep(20000);
 			}
 			conn.disconnect();
