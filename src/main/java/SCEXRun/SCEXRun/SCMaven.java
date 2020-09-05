@@ -18,7 +18,7 @@ public class SCMaven {
 		  for (int i=0; i<=executionNodes.length; i++)  
 	        { 
 			  execNodeIDs[i] = Integer.parseInt(executionNodes[i]);
-	      	SCMaven.SCRunExecution(execNodeIDs[i], input[1], input[2]);
+	      	  SCMaven.SCRunExecution(execNodeIDs[i], input[1], input[2]);
 	        }
 	}
 
