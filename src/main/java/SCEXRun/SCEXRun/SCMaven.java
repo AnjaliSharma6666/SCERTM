@@ -13,13 +13,12 @@ public class SCMaven {
 		
 		String[] input = args[0].split("::");
 		String[] executionNodes = input[0].split(",");
-		int[] execNodeIDs;
 		
-		  for (int i=0; i<=executionNodes.length; i++)  
-	        { 
-			  execNodeIDs[i] = Integer.parseInt(executionNodes[i]);
-	      	  SCMaven.SCRunExecution(execNodeIDs[i], input[1], input[2]);
-	        }
+		for (String node : executionNodes)  
+        { 
+			SCMaven.SCRunExecution(Integer.parseInt(node), input[1], input[2]);
+        } 
+	
 	}
 
 	private static void SCRunExecution(int SC_ExecutionNodeId, String SC_Host, String SC_Token) throws Exception {
