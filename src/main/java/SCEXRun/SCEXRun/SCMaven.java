@@ -57,8 +57,9 @@ public class SCMaven {
 				for (int i = 0; i < KeyVal.length; i = i + 2) {
 					map.put(KeyVal[i], KeyVal[i + 1]);
 				}
-
-				System.out.println("Started run with  " +  map.get("\"executionPlanRunId\"") + " for execution plan is "+ map.get("\"executionPlanName\"") + " with Run Status " + map.get("\"status\"") + " on Silk Central Project ID " + map.get("\"projectId\"") );
+				
+					
+				System.out.println("Started run with  " +  map.get("\"executionPlanRunId\"") + " for execution plan is "+ map.get("\"executionPlanName\"") + " with Run Status " + map.get("\"status\"") + " Project ID " + map.get("\"projectId\"") + " Run Link " + SC_Host + "/silk/DEF/TM/Execution?pId="	+ map.get("\"projectId\"") + "&testRunId=" + map.get("\"executionPlanRunId\"") + "&execView=execDetails&etab=4"); );
 				Thread.sleep(20000);
 			}
 			conn.disconnect();
