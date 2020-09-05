@@ -20,7 +20,6 @@ public class SCMaven {
 			  execNodeIDs[i] = Integer.parseInt(executionNodes[i]);
 	      	SCMaven.SCRunExecution(execNodeIDs[i], input[1], input[2]);
 	        }
-
 	}
 
 	private static void SCRunExecution(int SC_ExecutionNodeId, String SC_Host, String SC_Token) throws Exception {
